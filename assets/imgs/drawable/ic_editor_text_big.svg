@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="98px" height="52px" viewBox="0 0 98 52" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 54.1 (76490) - https://sketchapp.com -->
+    <title>58BDB81C-221A-4201-85F9-3C05EA02E73C</title>
+    <desc>Created with sketchtool.</desc>
+    <g id="Page-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="review18.-게시물-글쓰기-스택-추가할-때" transform="translate(-32.000000, -257.000000)">
+            <g id="ic_editor_text_big" transform="translate(32.000000, 257.000000)">
+                <path d="M8,0 L98,0 L98,52 L8,52 C3.581722,52 5.41083001e-16,48.418278 0,44 L-1.77635684e-15,8 C-2.31743984e-15,3.581722 3.581722,8.11624501e-16 8,0 Z" id="Rectangle" fill="#F6F6F6"></path>
+                <g id="ic_editor_text_t" transform="translate(41.000000, 10.000000)">
+                    <rect id="Rectangle" x="0" y="0" width="16" height="16"></rect>
+                    <path d="M6.88263913,14 L6.88263913,3.20509194 L5.01650182,3.20509194 C4.5825164,3.20509194 4.32212515,3.23903819 4.08343317,3.30693069 C3.28056015,3.56152758 3.30225942,4.32531825 3.2371616,4.76661952 C3.12866525,5.2758133 1.97860389,5.15700141 2.00030316,4.73267327 L2.10879951,2 L13.8915036,2 L14,4.73267327 C13.9783007,5.20792079 12.8716379,5.22489392 12.7631416,4.76661952 C12.6546452,4.25742574 12.5244496,3.49363508 11.8951707,3.30693069 C11.7215765,3.25601132 11.3960875,3.20509194 10.9404028,3.20509194 L9.11766403,3.20509194 L9.11766403,14 L6.88263913,14 Z" fill="#6EA3EB"></path>
+                </g>
+                <text id="텍스트" font-family="NanumSquareOTFR, NanumSquareOTF" font-size="11" font-weight="normal" fill="#437FD1">
+                    <tspan x="33.985" y="41">텍스트</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>

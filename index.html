@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title></title>
+    <script src="assets/js/jquery-3.4.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="assets/js/jquery.ui.touch-punch.js"></script>
+    <script type="text/javascript" src="assets/js/hammer.min.js"></script>
+    <link rel="stylesheet" href="assets/css/jquery.mobile-1.4.5.min.css" />
+    <script type="text/javascript" src="assets/js/config.js"></script>
+    <script type="text/javascript" src="assets/js/AprilEditor.js"></script>
+  <style>
+    body {
+        margin: 0;
+        font-family: NanumSquare !important;
+        line-height: normal !important;
+    }
+    #input_content img{
+      background-size: 80%;
+      width: 80%;
+      position: absolute;
+      left: 10%;
+    }
+    #input_how {
+      position: absolute;
+      display: none;
+      width: 80%;
+      left: 10%;
+    }
+    #input_how > img {
+      display: inline-block;
+      width: 33.3%;
+      float: left;
+    }
+    .div_line {
+      background-color: #9b9b9b;
+      display: inline-block;
+      height: 16px;
+      width: 1px;
+      top: 15px;
+      position: absolute;
+    }
+
+    #img_input {
+      display: none;
+    }
+    #dimmed {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      background: #000000;
+      margin: 0;
+      opacity: 0.2;
+      display: none;
+      z-index: 99;
+    }
+    #popup_link {
+      z-index: 99;
+      position: absolute;
+      width: 70%;
+      top: 23%;
+      left: 15%;
+      display: none;
+    }
+    .popup_header {
+      background-color: #6ea3eb;
+      color: white;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      text-align: center;
+      height: 40px;
+      line-height: 2.5;
+    }
+    .popup_content {
+      background: white;
+      height: 45px;
+    }
+    #url_input {
+      width: calc(100% - 30px);
+      height: 30px;
+      margin-left: 5px;
+      margin-top: 3.25px;
+      border: 1px solid #6ea3eb;
+      padding-left: 15px;
+     }
+    .controll_btns {
+      background-color: #f6f6f6;
+      text-align: right;
+      height: 40px;
+      line-height: 3;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+    }
+    #submit {
+      color: #6ea3eb;
+    }
+    .cancel {
+      color: #363636;
+    }
+    .fs_0_8 {
+      font-size: 0.8em;
+    }
+    .mr_30 {
+      margin-right: 30px;
+    }
+    @font-face{
+    font-family:'NanumSquare';
+    src: url('assets/fonts/nanumSquare/NanumSquareR.eot');
+    src: url('assets/fonts/nanumSquare//NanumSquareR.eot?#iefix') format('embedded-opentype'),
+         url('assets/fonts/nanumSquare/NanumSquareR.woff') format('woff'),
+         url('assets/fonts/nanumSquare/NanumSquareR.ttf') format('truetype');
+    }
+    .item {
+      position: relative;
+      padding-top: 10px;
+      padding-left: 10px;
+      display: flex;
+    }
+    .list_item {
+      position: relative;
+      background: white;
+      min-height: 102px;
+      border-bottom: 2px solid #f6f6f6;
+    }
+    .list_item:nth-last-child(1) {
+      margin-bottom: 20px;
+    }
+    .item_text_area {
+      display: inline-block;
+      width: calc(80% + 15px);
+      height: 90px;
+    }
+    .item_img_video, .item_album {
+      display: inline-block;
+      width: 55%;
+    }
+    .item_img_video > p {
+      width: 90%;
+    }
+    .thumnail {
+      width: 25%;
+      height: 90px;
+      padding-right: 15px;
+    }
+    .user_img {
+      width: 25%;
+      height: 80px;
+      padding-right: 15px;
+    }
+    p {
+      margin: 0;
+    }
+    .video_title {
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+      margin-bottom: 5px;
+    }
+    .video_descript {
+      color: #9b9b9b;
+      display:-webkit-box;
+      -webkit-line-clamp:2;
+      -webkit-box-orient:vertical;
+      line-height:1.3;
+      overflow:hidden;
+      text-overflow:ellipsis;
+    }
+    .video_link {
+      margin-top: 5px;
+      color: #6ea3eb;
+    }
+    .item_album > p {
+      display: inline-block;
+      position: relative;
+      line-height: 5;
+    }
+    .warm_grey_two {
+      color: #9b9b9b;
+    }
+    .item_delete {
+      background: #ff7962;
+      width: calc(100% - 80% - 20px);
+      color: white;
+      text-align: center;
+      position: absolute;
+      right: 0;
+      top: 0;
+      min-height: 102px;
+    }
+    .selectBar {
+      width: calc(100% - 80% - 15px);
+      min-height: 102px;
+      background: white;
+      margin-top: -10px;
+      z-index: 98;
+    }
+    .delete_msg {
+      display: none;
+      text-align: center;
+      top: 50%;
+      left: 50%;
+      position: absolute;
+      transform: translate(-50%, -65%);
+    }
+    .delete_img {
+      position: relative;
+      top: 6px;
+    }
+    #text_area {
+      font: #363636;
+      overflow: scroll;
+      position:absolute;
+      height: calc(100% - 75px);
+      width: 95%;
+      left: 1.5%;
+      top: 59px;
+      border-radius: 0;
+      box-shadow: none;
+      outline: none;
+      padding: 4px;
+      background: white;
+    }
+    .data_normal, .data_color, .data_textSize {
+      padding-top: 10px;
+      display: flex;
+      position: absolute;
+      background: #f6f6f6;
+      border-top-left-radius: 10px;
+    }
+    .data_color, .data_textSize {
+      display: none;
+    }
+    #editor_success {
+      padding-top: 10px;
+      float: right;
+    }
+    #text_style_controll {
+     position: absolute;
+     bottom: 0;
+     width: 82.2%;
+     background: #f6f6f6;
+     border-radius: 10px;
+     margin-left: 9%;
+     min-height: 50px;
+     box-shadow: 2px 4px 14px -2px #37474f;
+     z-index: 999;
+    }
+    .black {
+      color: #363636;
+    }
+    .red {
+      color: #ff6f59;
+    }
+    .blue {
+      color: #5da5f1;
+    }
+    .big {
+      font-size: 15px;
+    }
+    .regular {
+      font-size: 12px;
+    }
+    .small {
+      font-size:  9px;
+    }
+    .list_text {
+      height: 100% !important;
+    }
+    .post * {
+      touch-action: none;
+      pointer-events: none;
+      font-weight: 100 !important;
+      color: #363636 !important;
+      font-size: 1em !important;
+      word-break: break-word;
+    }
+
+    .itemBox {
+      border:solid 1px black;
+      width:400px;
+      height:50px;
+      padding:10px;
+      margin-bottom:10px;
+      background-color:yellow;
+    }
+
+  </style>
+  </head>
+  <body>
+    <div id="AprilEditor">
+<!--    	<div id="dimmed">
+    	</div>
+    	<div id="list_area">
+    	</div>
+    	<div id="input_content">
+    		<img src="./assets/imgs/drawable/ic_editor_menu.svg">
+    	</div>
+    	<div id="input_how">
+    		<img id="editor_txt" src="./assets/imgs/drawable/ic_editor_text_big.svg">
+    		<p class="div_line">
+    		</p>
+    		<img id="editor_img" src="./assets/imgs/drawable/ic_editor_img_big.svg">
+    		<p class="div_line">
+    		</p>
+    		<img id="editor_link" src="./assets/imgs/drawable/ic_editor_link_big.svg">
+    	</div>
+    	<input id="img_input" type="file" multiple="multiple" accept="image/*">
+
+    	<div id="editor_page" style="position: fixed; z-index: 999; top: 0; background: #f6f6f6; width: 100vw; height: 100%; display: none;">
+    		<div style="background: white; height: 52px;">
+    			<img id="backImg" src="./assets/imgs/drawable/ic_back_blue.svg" style="width: 4%; height: 20px; margin-top: 16px; margin-left: 5%;">
+    		</div>
+    		<div id="text_area" contenteditable="true">
+    		</div>
+    		<div id="text_style_controll">
+    			<div class="data_normal">
+    				<img id="font_color" class="black" src="./assets/imgs/drawable/ic_editor_color_black.svg" style="padding-right: 20px;">
+    				<img id="font_size" class="regular" src="./assets/imgs/drawable/ic_editor_font_regular.svg" style="padding-right: 20px;">
+    				<img id="font_bold" src="./assets/imgs/drawable/ic_editor.svg" style="padding-right: 20px;">
+    			</div>
+    			<div class="data_color">
+    				<img class="back" src="./assets/imgs/drawable/ic_editor_back_copy_2.svg" style="padding-right: 5px;">
+    				<img id="black" onclick="changeColor('black')" src="./assets/imgs/drawable/ic_editor_color_black.svg" style="padding-right: 5px;">
+    				<img id="red" onclick="changeColor('red')" src="./assets/imgs/drawable/ic_editor_color_red.svg" style="padding-right: 5px;">
+    				<img id="blue" onclick="changeColor('blue')" src="./assets/imgs/drawable/ic_editor_color_blue.svg" style="padding-right: 5px;">
+    			</div>
+    			<div class="data_textSize ds_no">
+    				<img class="back" src="./assets/imgs/drawable/ic_editor_back_copy_2.svg" style="padding-right: 5px;">
+    				<img onclick="changeSize('small')" src="./assets/imgs/drawable/ic_editor_font_small_copy.svg" style="padding-right: 5px;">
+    				<img onclick="changeSize('regular')" src="./assets/imgs/drawable/ic_editor_font_regular_copy.svg" style="padding-right: 5px;">
+    				<img onclick="changeSize('big')" src="./assets/imgs/drawable/ic_editor_font_big_copy.svg" style="padding-right: 5px;">
+    			</div>
+    			<img src="./assets/imgs/drawable/ic_editor_done_copy_3.svg" id="editor_success">
+    		</div>
+    	</div>
+
+    	<div id="popup_link">
+    		<div class="popup_header">
+    			가져올 동영상이나 사이트의 주소
+    		</div>
+    		<div class="popup_content">
+    			<input id="url_input" type="url" placeholder="https://"/>
+    		</div>
+    		<div class="controll_btns fs_0_8">
+    			<span class="cancel mr_30">취소</span>
+    			<span id="submit" class="mr_30">제출</span>
+    		</div>
+    		-->
+    	</div>
+    <script>
+// 에디터 이벤트 감지
+document.addEventListener("insertEditing", function (e) {
+    console.log(e);
+    var JsonArray = new Array();
+    var aa = {
+        "type": "image",
+        "width": '',  // image width
+        "height": '', // image height
+        "data": "loca file"
+    }
+    JsonArray.push(aa);
+
+    var link = {
+        "type": "link",
+        "data": 'string', // url
+        "metadata": {
+            "title": 'string',
+            "site_name": 'string',
+            "description": 'string',
+            "thumbnail": 'string',
+            "url": 'string'
+        }
+    }
+    e.callback.success(JsonArray);
+}, false);
+
+$("#test").on("click", function() {
+  var editor = new AprilEditor();
+    console.log(editor.getItems());
+     var JsonArray = new Array();
+        var aa = {
+            "type": "image",
+            "width": '',  // image width
+            "height": '', // image height
+            "data": "loca file"
+        }
+        JsonArray.push(aa);
+     var link = {
+            "type": "link",
+            "data": 'string', // url
+            "metadata": {
+                "title": 'string',
+                "site_name": 'string',
+                "description": 'string',
+                "thumbnail": 'string',
+                "url": 'string'
+            }
+        }
+        JsonArray.push(link);
+    //editor.setItems(editor.getItems());
+});
+        </script>
+
+  </body>
+</html>
