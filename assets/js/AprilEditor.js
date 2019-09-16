@@ -303,23 +303,25 @@ $(document).on("click", ".post", function(e) {
 
 $(document).ready(function () {
     var ele = document.querySelector("#text_area");
-    ele.addEventListener("paste", function (e) {
-        var pastedData = e.clipboardData || window.clipboardData;
-        var textData = pastedData.getData("Text");
-        var beforeData = $("#text_area").html();
+    if (ele) {
+        ele.addEventListener("paste", function (e) {
+            var pastedData = e.clipboardData || window.clipboardData;
+            var textData = pastedData.getData("Text");
+            var beforeData = $("#text_area").html();
 
-        setTimeout(function () {
-            e.stopPropagation();
-            e.preventDefault();
-            for (var i=0; i<e.srcElement.childElementCount; i++) {
-                if (e.srcElement.childNodes[i].className != null || e.srcElement.childNodes[i].className != "") {
-                    $("#text_area").html('');
-                    window.document.execCommand("insertHTML", false, beforeData + textData);
-                    return;
+            setTimeout(function () {
+                e.stopPropagation();
+                e.preventDefault();
+                for (var i=0; i<e.srcElement.childElementCount; i++) {
+                    if (e.srcElement.childNodes[i].className != null || e.srcElement.childNodes[i].className != "") {
+                        $("#text_area").html('');
+                        window.document.execCommand("insertHTML", false, beforeData + textData);
+                        return;
+                    }
                 }
-            }
-        },10);
-    });
+            },10);
+        });
+    }
 });
 
 // Text Controll Area End!
