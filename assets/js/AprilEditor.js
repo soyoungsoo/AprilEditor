@@ -366,7 +366,7 @@ function insertImg(file) {
     var str =
         '<div class="list_item img_content">' +
             '<div class="item">' +
-                '<img class="user_img" src="' + file.data + '"/>' +
+                '<img class="user_img" src="' + file.data + '" data-width="' + file.width + '" data-height="' + file.height + '"/>' +
                 '<div class="item_album">' +
                     '<p class="warm_grey_two">사진</p>' +
                 '</div>' + htmlDelete;
@@ -559,8 +559,8 @@ AprilEditor = function(){
                     //console.log(textJsonObj);
                     break;
                 case "list_item img_content" :
-                    imgJsonObj.width = ref.find(".user_img").css("width").replace("px", "");
-                    imgJsonObj.height = ref.find(".user_img").css("height").replace("px", "");
+                    imgJsonObj.width = ref.find('.user_img').data('width');
+                    imgJsonObj.height = ref.find('.user_img').data('height');
                     imgJsonObj.data = ref.find(".user_img").attr("src");
                     temObj = imgJsonObj;
                     break;
