@@ -37,6 +37,7 @@ document.addEventListener('insertEditing', function (e) {
 		}		
 		your code...	 
     var JsonArray = [];
+    
     var imgOne = {
         'type': 'image',
         'width': '101',  // image width
@@ -49,6 +50,7 @@ document.addEventListener('insertEditing', function (e) {
         'height': '90', // image height
         'data': 'server file'
     };
+    
     var linkOne = {
     	"type": "link",
     	"data": string, // url
@@ -71,6 +73,7 @@ document.addEventListener('insertEditing', function (e) {
     		{ "text": "...", "attrs": { "link": "https://..." } },
     	]
     }
+    
     JsonArray.push(imgOne);
     JsonArray.push(imgTwo);
     JsonArray.push(linkOne);
