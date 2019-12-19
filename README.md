@@ -49,8 +49,32 @@ document.addEventListener('insertEditing', function (e) {
         'height': '90', // image height
         'data': 'server file'
     };
+    var linkOne = {
+    	"type": "link",
+    	"data": string, // url
+    	"metadata": {
+    		"title": string,
+    		"site_name": string,
+    		"description": string,
+    		"thumbnail": string,
+    		"url": string
+    	}
+    }
+    
+    var textOne = {
+    	"type": "text",
+    	"data": [
+    		{ "text": "..." },
+    		{ "text": "...", "attrs": { "bold": true } },
+    		{ "text": "...", "attrs": { "color": "#cccccc" } },
+    		{ "text": "...", "attrs": { "size": 0~2 } },
+    		{ "text": "...", "attrs": { "link": "https://..." } },
+    	]
+    }
     JsonArray.push(imgOne);
-		JsonArray.push(imgTwo);
+    JsonArray.push(imgTwo);
+    JsonArray.push(linkOne);
+    JsonArray.push(textOne);
 
     e.callback.success(JsonArray);
 });
