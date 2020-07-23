@@ -6,41 +6,41 @@ var template =
     '<div id="dimmed"></div>' +
     '<div id="list_area"></div>' +
     '<div id="input_content">' +
-      '<img src="./assets/imgs/drawable/ic_editor_menu.svg">' +
+      '<img src="/AprilEditor/assets/imgs/drawable/ic_editor_menu.svg">' +
     '</div>' +
     '<div id="input_how">' +
-        '<img id="editor_txt" src="./assets/imgs/drawable/ic_editor_text_big.svg">' +
+        '<img id="editor_txt" src="/AprilEditor/assets/imgs/drawable/ic_editor_text_big.svg">' +
         '<p class="div_line"></p>' +
-        '<img id="editor_img" src="./assets/imgs/drawable/ic_editor_img_big.svg">' +
+        '<img id="editor_img" src="/AprilEditor/assets/imgs/drawable/ic_editor_img_big.svg">' +
         '<p class="div_line"></p>' +
-        '<img id="editor_link" src="./assets/imgs/drawable/ic_editor_link_big.svg">' +
+        '<img id="editor_link" src="/AprilEditor/assets/imgs/drawable/ic_editor_link_big.svg">' +
     '</div>' +
     '<input id="img_input" type="file" multiple="multiple" accept="image/*">' +
     <!-- 텍스트 입력창 -->
     '<div id="editor_page" style="position: fixed; z-index: 999; top: 0; background: #f6f6f6; width: 100vw; height: 100%; display: none;">' +
         '<div style="background: white; height: 52px;">' +
-            '<img id="backImg" src="./assets/imgs/drawable/ic_back_blue.svg" style="width: 4%; height: 20px; margin-top: 16px; margin-left: 5%;">' +
+            '<img id="backImg" src="/AprilEditor/assets/imgs/drawable/ic_back_blue.svg" style="width: 4%; height: 20px; margin-top: 16px; margin-left: 5%;">' +
         '</div>' +
         '<div id="text_area" contenteditable="true"></div>' +
         '<div id="text_style_controll">' +
             '<div class="data_normal">' +
-                '<img id="font_color" class="black" src="./assets/imgs/drawable/ic_editor_color_black.svg" style="padding-right: 20px;">' +
-                '<img id="font_size" class="regular" src="./assets/imgs/drawable/ic_editor_font_regular.svg" style="padding-right: 20px;">' +
-                '<img id="font_bold" src="./assets/imgs/drawable/ic_editor.svg" style="padding-right: 20px;">'+
+                '<img id="font_color" class="black" src="/AprilEditor/assets/imgs/drawable/ic_editor_color_black.svg" style="padding-right: 20px;">' +
+                '<img id="font_size" class="regular" src="/AprilEditor/assets/imgs/drawable/ic_editor_font_regular.svg" style="padding-right: 20px;">' +
+                '<img id="font_bold" src="/AprilEditor/assets/imgs/drawable/ic_editor.svg" style="padding-right: 20px;">'+
             '</div>'+
             '<div class="data_color">'+
-                '<img class="back" src="./assets/imgs/drawable/ic_editor_back_copy_2.svg" style="padding-right: 5px;">'+
-                '<img id="black" onclick="changeColor(black)" src="./assets/imgs/drawable/ic_editor_color_black.svg" style="padding-right: 5px;">' +
-                '<img id="red" onclick="changeColor(red)" src="./assets/imgs/drawable/ic_editor_color_red.svg" style="padding-right: 5px;">' +
-                '<img id="blue" onclick="changeColor(blue)" src="./assets/imgs/drawable/ic_editor_color_blue.svg" style="padding-right: 5px;"> ' +
+                '<img class="back" src="/AprilEditor/assets/imgs/drawable/ic_editor_back_copy_2.svg" style="padding-right: 5px;">'+
+                '<img id="black" onclick="changeColor(\'black\')" src="/AprilEditor/assets/imgs/drawable/ic_editor_color_black.svg" style="padding-right: 5px;">' +
+                '<img id="red" onclick="changeColor(\'red\')" src="/AprilEditor/assets/imgs/drawable/ic_editor_color_red.svg" style="padding-right: 5px;">' +
+                '<img id="blue" onclick="changeColor(\'blue\')" src="/AprilEditor/assets/imgs/drawable/ic_editor_color_blue.svg" style="padding-right: 5px;"> ' +
             '</div>' +
             '<div class="data_textSize ds_no">' +
-                '<img class="back" src="./assets/imgs/drawable/ic_editor_back_copy_2.svg" style="padding-right: 5px;">' +
-                '<img onclick="changeSize(small)" src="./assets/imgs/drawable/ic_editor_font_small_copy.svg" style="padding-right: 5px;">' +
-                '<img onclick="changeSize(regular)" src="./assets/imgs/drawable/ic_editor_font_regular_copy.svg" style="padding-right: 5px;">' +
-                '<img onclick="changeSize(big)" src="./assets/imgs/drawable/ic_editor_font_big_copy.svg" style="padding-right: 5px;">' +
+                '<img class="back" src="/AprilEditor/assets/imgs/drawable/ic_editor_back_copy_2.svg" style="padding-right: 5px;">' +
+                '<img onclick="changeSize(\'small\')" src="/AprilEditor/assets/imgs/drawable/ic_editor_font_small_copy.svg" style="padding-right: 5px;">' +
+                '<img onclick="changeSize(\'regular\')" src="/AprilEditor/assets/imgs/drawable/ic_editor_font_regular_copy.svg" style="padding-right: 5px;">' +
+                '<img onclick="changeSize(\'big\')" src="/AprilEditor/assets/imgs/drawable/ic_editor_font_big_copy.svg" style="padding-right: 5px;">' +
             '</div>' +
-            '<img src="./assets/imgs/drawable/ic_editor_done_copy_3.svg" id="editor_success">' +
+            '<img src="/AprilEditor/assets/imgs/drawable/ic_editor_done_copy_3.svg" id="editor_success">' +
         '</div>' +
     '</div>' +
     <!-- 팝업 -->
@@ -66,7 +66,8 @@ function textColorStatus() {
     } else if (color == fontRgbBlack) {
         colorName = 'black';
     }
-    $("#font_color").attr("src", "./assets/imgs/drawable/ic_editor_color_" + colorName + ".svg");
+    console.log(colorName);
+    $("#font_color").attr("src", "/AprilEditor/assets/imgs/drawable/ic_editor_color_" + colorName + ".svg");
 }
 
 // 텍스트 크기 변환
@@ -80,7 +81,7 @@ function textdSizeStatus() {
     } else if (size == '1') {
         sizeName = 'small';
     }
-    $("#font_size").attr("src", "./assets/imgs/drawable/ic_editor_font_" + sizeName + "_copy.svg");
+    $("#font_size").attr("src", "AprilEditor/assets/imgs/drawable/ic_editor_font_" + sizeName + "_copy.svg");
     $("#font_size").attr("class", size);
 }
 
@@ -97,17 +98,17 @@ function selectedTextBoldStatus(select) {
 // 텍스트 볼드 이미지 변경
 function imgBoldToggle(bold) {
     if (bold) {
-        $("#font_bold").attr("src", "./assets/imgs/drawable/ic_editor_bold.svg");
+        $("#font_bold").attr("src", "/AprilEditor/assets/imgs/drawable/ic_editor_bold.svg");
         $("#font_bold").addClass('bold');
     } else {
-        $("#font_bold").attr("src", "./assets/imgs/drawable/ic_editor.svg");
+        $("#font_bold").attr("src", "/AprilEditor/assets/imgs/drawable/ic_editor.svg");
         $("#font_bold").removeClass('bold');
     }
 }
 
 // 칼라 이미지 변경
 function changeColor(color) {
-    $("#font_color").attr("src", "./assets/imgs/drawable/ic_editor_color_" + color + ".svg");
+    $("#font_color").attr("src", "/AprilEditor/assets/imgs/drawable/ic_editor_color_" + color + ".svg");
     $(".data_normal").fadeIn();
     $(".data_color").fadeOut();
 
@@ -125,7 +126,7 @@ function changeColor(color) {
 
 // 사이즈 이미지 변경
 function changeSize(size) {
-    $("#font_size").attr("src", "./assets/imgs/drawable/ic_editor_font_" + size + "_copy.svg");
+    $("#font_size").attr("src", "/AprilEditor/assets/imgs/drawable/ic_editor_font_" + size + "_copy.svg");
     $("#font_size").attr("class", size);
     $(".data_normal").fadeIn();
     $(".data_textSize").fadeOut();
@@ -144,9 +145,9 @@ function changeSize(size) {
 
 // 기본 이미지로 변경
 function defaultMenuSetting() {
-    $("#font_color").attr("src", "./assets/imgs/drawable/ic_editor_color_black.svg");
-    $("#font_size").attr("src", "./assets/imgs/drawable/ic_editor_font_regular_copy.svg");
-    $("#font_bold").attr("src", "./assets/imgs/drawable/ic_editor.svg");
+    $("#font_color").attr("src", "/AprilEditor/assets/imgs/drawable/ic_editor_color_black.svg");
+    $("#font_size").attr("src", "/AprilEditor/assets/imgs/drawable/ic_editor_font_regular_copy.svg");
+    $("#font_bold").attr("src", "/AprilEditor/assets/imgs/drawable/ic_editor.svg");
     $("#text_area").focus();
     setFontColor(fontColorBlack);
 }
@@ -210,7 +211,7 @@ function insertText(text){
                 '<div class="post" style="width: calc(80% + 15px); display: inline-block; padding-bottom: 10px;">' + text + '</div>' +
                 '<div class="selectBar" style="min-height: 40px;">'+
                     '<div style="text-align: center;position:relative; top: 50%;transform: translate(0%, -50%);">'+
-                        '<img class="selectImg" src="./assets/imgs/drawable/ic_drag.svg" style="position: relative;">'+
+                        '<img class="selectImg" src="/AprilEditor/assets/imgs/drawable/ic_drag.svg" style="position: relative;">'+
                     '</div>'+
                 '</div>'+
                 '<div class="both" style="clear: both;"></div>' +
@@ -218,7 +219,7 @@ function insertText(text){
             '<div class="item_delete" style="min-height: 40px; height: 100%;"><p style="position:relative; top: 50%;transform: translate(0%, -50%);">삭제</p></div>'+
             '<div class="delete_msg warm_grey_two">'+
                 '<span>삭제됐습니다</span>'+
-                '<img src="./assets/imgs/drawable/ic_editor_redo.svg" class="delete_img">'+
+                '<img src="/AprilEditor/assets/imgs/drawable/ic_editor_redo.svg" class="delete_img">'+
             '</div>'+
         '</div>';
     $("#list_area").append(str).trigger('create');
@@ -646,7 +647,7 @@ function insertNode(el, arr, color, size, boldState) {
 const htmlDelete =
             '<div class="selectBar">'+
                 '<div style="text-align: center; line-height: 6">'+
-                    '<img class="selectImg" src="./assets/imgs/drawable/ic_drag.svg" style="position: relative;">'+
+                    '<img class="selectImg" src="/AprilEditor/assets/imgs/drawable/ic_drag.svg" style="position: relative;">'+
                 '</div>'+
             '</div>'+
     '<div class="both" style="clear: both;"></div>' +
@@ -654,7 +655,7 @@ const htmlDelete =
         '<div class="item_delete"><p style="line-height: 6;">삭제</p></div>'+
         '<div class="delete_msg warm_grey_two">'+
             '<span>삭제됐습니다</span>'+
-            '<img src="./assets/imgs/drawable/ic_editor_redo.svg" class="delete_img">'+
+            '<img src="/AprilEditor/assets/imgs/drawable/ic_editor_redo.svg" class="delete_img">'+
         '</div>'+
     '</div>';
 
