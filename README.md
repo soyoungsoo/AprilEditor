@@ -7,10 +7,12 @@ javascript을 기반으로 구현된 웹 에디터입니다.
 ```javascript
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-<script src="../static/AprilEditor/jquery.ui.touch-punch.js"></script>
-<script type="text/javascript" src="../static/AprilEditor/hammer.min.js"></script>
-<link rel="stylesheet" href="../static/AprilEditor/jquery.mobile-1.4.5.min.css" />
-<link rel="stylesheet" href="../static/AprilEditor/AprilEditor.css" />
+<script src="./AprilEditor/assets/js/jquery.ui.touch-punch.js"></script>
+<script type="text/javascript" src="./AprilEditor/assets/js/hammer.min.js"></script>
+<script type="text/javascript" src="./AprilEditor/assets/js/config.js"></script>
+<script type="text/javascript" src="./AprilEditor/assets/js/AprilEditor.js"></script>
+<link rel="stylesheet" href="./AprilEditor/assets/css/jquery.mobile-1.4.5.min.css" />
+<link rel="stylesheet" href="./AprilEditor/assets/css/AprilEditor.css" />
 ```
 
 ## 2. Target Element
@@ -21,8 +23,7 @@ javascript을 기반으로 구현된 웹 에디터입니다.
 ## 3. Create
 
 ```
-const editor = require('../../../../static/AprilEditor/AprilEditor');
-editor.init();
+$("#editor").init();
 ```
 
 ## 4. Use how
