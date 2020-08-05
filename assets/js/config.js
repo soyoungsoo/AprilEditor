@@ -32,6 +32,6 @@ const pathError = '서버 경로를 지정해주세요';
 const textError = '아무것도 입력하지 않으셨습니다';
 // url reg
 const urlReg = /^(((http(s?))\:\/\/)?)([0-9a-zA-Z\-]+\.)+[a-zA-Z]{2,6}(\:[0-9]+)?(\/\S*)?/;
-
+const errorJsonMsg = "json 형식이 올바르지 않습니다.";
 // img cdn
 let _path = '';
