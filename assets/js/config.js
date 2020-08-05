@@ -26,10 +26,12 @@ const fontRgbBlack = 'rgb(51, 51, 51)';
 // message
 const urlInputError = '주소를 입력해주세요';
 const imgTypeError = '이미지 파일만 업로드하실 수 있습니다';
-const urlErrorMsg = '올바른 주소를 입력해주세요'
-const serverImgError = 'server img error';
-const serverLinkError = 'server link error';
-
+const urlErrorMsg = '올바른 주소를 입력해주세요';
+const errMsg = '등록 중 에러가 발생하였습니다';
+const pathError = '서버 경로를 지정해주세요';
 const textError = '아무것도 입력하지 않으셨습니다';
 // url reg
 const urlReg = /^(((http(s?))\:\/\/)?)([0-9a-zA-Z\-]+\.)+[a-zA-Z]{2,6}(\:[0-9]+)?(\/\S*)?/;
+
+// img cdn
+let _path = '';
