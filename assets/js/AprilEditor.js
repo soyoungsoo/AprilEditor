@@ -453,27 +453,32 @@ function insertLink(link) {
 
 function linkStrTemplate(link) {
     var str = '';
-    if (link.metadata.thumbnail !== '' && link.metadata.thumbnail !== null) {
-        str =
-            '<div class="list_item link_content_yes">' +
-            '<div class="item link">' +
-            '<input type="hidden" class="item_url" value="' + link.data + '">' +
-            '<img class="thumnail" src="' + link.metadata.thumbnail + '">' +
-            '<div class="item_img_video">' +
-            '<p class="video_title ">' + link.metadata.title + '</p>' +
-            '<p class="video_descript">' + link.metadata.description + '</p>' +
-            '<p class="video_link fs_0_8">' + link.metadata.site_name + '</p>' +
-            '</div>' + htmlDelete;
-    } else {
-        str =
-            '<div class="list_item link_content_no">' +
-            '<div class="item link">' +
-            '<input type="hidden" class="item_url" value="' + link.data + '">' +
-            '<div class="item_text_area">' +
-            '<p class="video_title ">' + link.metadata.title + '</p>' +
-            '<p class="video_descript">' + link.metadata.description + '</p>' +
-            '<p class="video_link fs_0_8">' + link.metadata.site_name + '</p>' +
-            '</div>' + htmlDelete;
+    
+    try {
+        if (link.metadata.thumbnail !== '' && link.metadata.thumbnail !== null) {
+            str =
+                '<div class="list_item link_content_yes">' +
+                '<div class="item link">' +
+                '<input type="hidden" class="item_url" value="' + link.data + '">' +
+                '<img class="thumnail" src="' + link.metadata.thumbnail + '">' +
+                '<div class="item_img_video">' +
+                '<p class="video_title ">' + link.metadata.title + '</p>' +
+                '<p class="video_descript">' + link.metadata.description + '</p>' +
+                '<p class="video_link fs_0_8">' + link.metadata.site_name + '</p>' +
+                '</div>' + htmlDelete;
+        } else {
+            str =
+                '<div class="list_item link_content_no">' +
+                '<div class="item link">' +
+                '<input type="hidden" class="item_url" value="' + link.data + '">' +
+                '<div class="item_text_area">' +
+                '<p class="video_title ">' + link.metadata.title + '</p>' +
+                '<p class="video_descript">' + link.metadata.description + '</p>' +
+                '<p class="video_link fs_0_8">' + link.metadata.site_name + '</p>' +
+                '</div>' + htmlDelete;
+        }
+    } catch (e) {
+        alert(errorJsonMsg);
     }
     return str;
 }
