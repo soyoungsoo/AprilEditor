@@ -6,52 +6,52 @@ var template =
     '<div id="dimmed"></div>' +
     '<div id="list_area"></div>' +
     '<div id="input_content">' +
-      '<img src="/AprilEditor/assets/imgs/drawable/ic_editor_menu.svg">' +
+    '<img src="assets/imgs/drawable/ic_editor_menu.svg">' +
     '</div>' +
     '<div id="input_how">' +
-        '<img id="editor_txt" src="/AprilEditor/assets/imgs/drawable/ic_editor_text_big.svg">' +
-        '<p class="div_line"></p>' +
-        '<img id="editor_img" src="/AprilEditor/assets/imgs/drawable/ic_editor_img_big.svg">' +
-        '<p class="div_line"></p>' +
-        '<img id="editor_link" src="/AprilEditor/assets/imgs/drawable/ic_editor_link_big.svg">' +
+    '<img id="editor_txt" src="assets/imgs/drawable/ic_editor_text_big.svg">' +
+    '<p class="div_line"></p>' +
+    '<img id="editor_img" src="assets/imgs/drawable/ic_editor_img_big.svg">' +
+    '<p class="div_line"></p>' +
+    '<img id="editor_link" src="assets/imgs/drawable/ic_editor_link_big.svg">' +
     '</div>' +
     '<input id="img_input" type="file" multiple="multiple" accept="image/*">' +
     <!-- 텍스트 입력창 -->
     '<div id="editor_page" style="position: fixed; z-index: 999; top: 0; background: #f6f6f6; width: 100vw; height: 100%; display: none;">' +
-        '<div style="background: white; height: 52px;">' +
-            '<img id="backImg" src="/AprilEditor/assets/imgs/drawable/ic_back_blue.svg" style="width: 4%; height: 20px; margin-top: 16px; margin-left: 5%;">' +
-        '</div>' +
-        '<div id="text_area" contenteditable="true"></div>' +
-        '<div id="text_style_controll">' +
-            '<div class="data_normal">' +
-                '<img id="font_color" class="black" src="/AprilEditor/assets/imgs/drawable/ic_editor_color_black.svg" style="padding-right: 20px;">' +
-                '<img id="font_size" class="regular" src="/AprilEditor/assets/imgs/drawable/ic_editor_font_regular.svg" style="padding-right: 20px;">' +
-                '<img id="font_bold" src="/AprilEditor/assets/imgs/drawable/ic_editor.svg" style="padding-right: 20px;">'+
-            '</div>'+
-            '<div class="data_color">'+
-                '<img class="back" src="/AprilEditor/assets/imgs/drawable/ic_editor_back_copy_2.svg" style="padding-right: 5px;">'+
-                '<img id="black" onclick="changeColor(\'black\')" src="/AprilEditor/assets/imgs/drawable/ic_editor_color_black.svg" style="padding-right: 5px;">' +
-                '<img id="red" onclick="changeColor(\'red\')" src="/AprilEditor/assets/imgs/drawable/ic_editor_color_red.svg" style="padding-right: 5px;">' +
-                '<img id="blue" onclick="changeColor(\'blue\')" src="/AprilEditor/assets/imgs/drawable/ic_editor_color_blue.svg" style="padding-right: 5px;"> ' +
-            '</div>' +
-            '<div class="data_textSize ds_no">' +
-                '<img class="back" src="/AprilEditor/assets/imgs/drawable/ic_editor_back_copy_2.svg" style="padding-right: 5px;">' +
-                '<img onclick="changeSize(\'small\')" src="/AprilEditor/assets/imgs/drawable/ic_editor_font_small_copy.svg" style="padding-right: 5px;">' +
-                '<img onclick="changeSize(\'regular\')" src="/AprilEditor/assets/imgs/drawable/ic_editor_font_regular_copy.svg" style="padding-right: 5px;">' +
-                '<img onclick="changeSize(\'big\')" src="/AprilEditor/assets/imgs/drawable/ic_editor_font_big_copy.svg" style="padding-right: 5px;">' +
-            '</div>' +
-            '<img src="/AprilEditor/assets/imgs/drawable/ic_editor_done_copy_3.svg" id="editor_success">' +
-        '</div>' +
+    '<div style="background: white; height: 52px;">' +
+    '<img id="backImg" src="assets/imgs/drawable/ic_back_blue.svg" style="width: 4%; height: 20px; margin-top: 16px; margin-left: 5%;">' +
+    '</div>' +
+    '<div id="text_area" contenteditable="true"></div>' +
+    '<div id="text_style_controll">' +
+    '<div class="data_normal">' +
+    '<img id="font_color" class="black" src="assets/imgs/drawable/ic_editor_color_black.svg" style="padding-right: 20px;">' +
+    '<img id="font_size" class="regular" src="assets/imgs/drawable/ic_editor_font_regular.svg" style="padding-right: 20px;">' +
+    '<img id="font_bold" src="assets/imgs/drawable/ic_editor.svg" style="padding-right: 20px;">' +
+    '</div>' +
+    '<div class="data_color">' +
+    '<img class="back" src="assets/imgs/drawable/ic_editor_back_copy_2.svg" style="padding-right: 5px;">' +
+    '<img id="black" onclick="changeColor(\'black\')" src="assets/imgs/drawable/ic_editor_color_black.svg" style="padding-right: 5px;">' +
+    '<img id="red" onclick="changeColor(\'red\')" src="assets/imgs/drawable/ic_editor_color_red.svg" style="padding-right: 5px;">' +
+    '<img id="blue" onclick="changeColor(\'blue\')" src="assets/imgs/drawable/ic_editor_color_blue.svg" style="padding-right: 5px;"> ' +
+    '</div>' +
+    '<div class="data_textSize ds_no">' +
+    '<img class="back" src="assets/imgs/drawable/ic_editor_back_copy_2.svg" style="padding-right: 5px;">' +
+    '<img onclick="changeSize(\'small\')" src="assets/imgs/drawable/ic_editor_font_small_copy.svg" style="padding-right: 5px;">' +
+    '<img onclick="changeSize(\'regular\')" src="assets/imgs/drawable/ic_editor_font_regular_copy.svg" style="padding-right: 5px;">' +
+    '<img onclick="changeSize(\'big\')" src="assets/imgs/drawable/ic_editor_font_big_copy.svg" style="padding-right: 5px;">' +
+    '</div>' +
+    '<img src="assets/imgs/drawable/ic_editor_done_copy_3.svg" id="editor_success">' +
+    '</div>' +
     '</div>' +
     <!-- 팝업 -->
     '<div id="popup_link">' +
-        '<div class="popup_header">가져올 동영상이나 사이트의 주소</div>' +
+    '<div class="popup_header">가져올 동영상이나 사이트의 주소</div>' +
     '   <div class="popup_content">' +
-            '<input id="url_input" type="url" placeholder="https://"/>' +
-        '</div>' +
-        '<div class="controll_btns fs_0_8">' +
-            '<span class="cancel mr_30">취소</span>' +
-            '<span id="submit" class="mr_30">제출</span>' +
+    '<input id="url_input" type="url" placeholder="https://"/>' +
+    '</div>' +
+    '<div class="controll_btns fs_0_8">' +
+    '<span class="cancel mr_30">취소</span>' +
+    '<span id="submit" class="mr_30">제출</span>' +
     '</div>';
 
 
@@ -67,7 +67,7 @@ function textColorStatus() {
         colorName = 'black';
     }
     console.log(colorName);
-    $("#font_color").attr("src", "/AprilEditor/assets/imgs/drawable/ic_editor_color_" + colorName + ".svg");
+    $("#font_color").attr("src", "assets/imgs/drawable/ic_editor_color_" + colorName + ".svg");
 }
 
 // 텍스트 크기 변환
@@ -87,28 +87,29 @@ function textdSizeStatus() {
 
 // 텍스트 볼드 변환
 function selectedTextBoldStatus(select) {
-    if (select.baseNode.parentNode.localName == 'b' || select.baseNode.parentNode.localName =='strong') {
+    if (select.baseNode.parentNode.localName == 'b' || select.baseNode.parentNode.localName == 'strong') {
         imgBoldToggle(true);
-    } else if (select.baseNode.parentNode.parentNode.localName == 'b' || select.baseNode.parentNode.parentNode.localName =='strong') {
+    } else if (select.baseNode.parentNode.parentNode.localName == 'b' || select.baseNode.parentNode.parentNode.localName == 'strong') {
         imgBoldToggle(true);
     } else {
         imgBoldToggle(false);
     }
 }
+
 // 텍스트 볼드 이미지 변경
 function imgBoldToggle(bold) {
     if (bold) {
-        $("#font_bold").attr("src", "/AprilEditor/assets/imgs/drawable/ic_editor_bold.svg");
+        $("#font_bold").attr("src", "assets/imgs/drawable/ic_editor_bold.svg");
         $("#font_bold").addClass('bold');
     } else {
-        $("#font_bold").attr("src", "/AprilEditor/assets/imgs/drawable/ic_editor.svg");
+        $("#font_bold").attr("src", "assets/imgs/drawable/ic_editor.svg");
         $("#font_bold").removeClass('bold');
     }
 }
 
 // 칼라 이미지 변경
 function changeColor(color) {
-    $("#font_color").attr("src", "/AprilEditor/assets/imgs/drawable/ic_editor_color_" + color + ".svg");
+    $("#font_color").attr("src", "assets/imgs/drawable/ic_editor_color_" + color + ".svg");
     $(".data_normal").fadeIn();
     $(".data_color").fadeOut();
 
@@ -126,7 +127,7 @@ function changeColor(color) {
 
 // 사이즈 이미지 변경
 function changeSize(size) {
-    $("#font_size").attr("src", "/AprilEditor/assets/imgs/drawable/ic_editor_font_" + size + "_copy.svg");
+    $("#font_size").attr("src", "assets/imgs/drawable/ic_editor_font_" + size + "_copy.svg");
     $("#font_size").attr("class", size);
     $(".data_normal").fadeIn();
     $(".data_textSize").fadeOut();
@@ -145,20 +146,20 @@ function changeSize(size) {
 
 // 기본 이미지로 변경
 function defaultMenuSetting() {
-    $("#font_color").attr("src", "/AprilEditor/assets/imgs/drawable/ic_editor_color_black.svg");
-    $("#font_size").attr("src", "/AprilEditor/assets/imgs/drawable/ic_editor_font_regular_copy.svg");
-    $("#font_bold").attr("src", "/AprilEditor/assets/imgs/drawable/ic_editor.svg");
+    $("#font_color").attr("src", "assets/imgs/drawable/ic_editor_color_black.svg");
+    $("#font_size").attr("src", "assets/imgs/drawable/ic_editor_font_regular_copy.svg");
+    $("#font_bold").attr("src", "assets/imgs/drawable/ic_editor.svg");
     $("#text_area").focus();
     setFontColor(fontColorBlack);
 }
 
 // 볼드체로 세팅
-function setBold () {
+function setBold() {
     document.execCommand('bold');
 }
 
 // 입력받은 사이즈로 세팅
-function setFontSize (size) {
+function setFontSize(size) {
     document.execCommand('fontSize', false, size);
 }
 
@@ -177,13 +178,13 @@ $(document).on('click', '#input_content', function () {
     $("#input_how").fadeIn("fast");
 });
 
-$(document).on('click', '#editor_img', function() {
+$(document).on('click', '#editor_img', function () {
     $("#img_input").click();
 });
 
 // Text Controll Area Start!
 // 작성 완료를 클릭했을 때
-$(document).on("click", "#editor_success", function() {
+$(document).on("click", "#editor_success", function () {
     $("#text_area").contents().filter(function (e) {
         return $("#text_area").contents().eq(e).prop('tagName') != 'DIV';
     }).wrapAll("<div />");
@@ -204,42 +205,43 @@ $(document).on("click", "#editor_success", function() {
     insertText(text);
 });
 
-function insertText(text){
+function insertText(text) {
     var str =
         '<div class="list_item text_content" style="min-height: 40px;">' +
-            '<div class="item">' +
-                '<div class="post" style="width: calc(80% + 15px); display: inline-block; padding-bottom: 10px;">' + text + '</div>' +
-                '<div class="selectBar" style="min-height: 40px;">'+
-                    '<div style="text-align: center;position:relative; top: 50%;transform: translate(0%, -50%);">'+
-                        '<img class="selectImg" src="/AprilEditor/assets/imgs/drawable/ic_drag.svg" style="position: relative;">'+
-                    '</div>'+
-                '</div>'+
-                '<div class="both" style="clear: both;"></div>' +
-            '</div>'+
-            '<div class="item_delete" style="min-height: 40px; height: 100%;"><p style="position:relative; top: 50%;transform: translate(0%, -50%);">삭제</p></div>'+
-            '<div class="delete_msg warm_grey_two">'+
-                '<span>삭제됐습니다</span>'+
-                '<img src="/AprilEditor/assets/imgs/drawable/ic_editor_redo.svg" class="delete_img">'+
-            '</div>'+
+        '<div class="item">' +
+        '<div class="post" style="width: calc(80% + 15px); display: inline-block; padding-bottom: 10px;">' + text + '</div>' +
+        '<div class="selectBar" style="min-height: 40px;">' +
+        '<div style="text-align: center;position:relative; top: 50%;transform: translate(0%, -50%);">' +
+        '<img class="selectImg" src="assets/imgs/drawable/ic_drag.svg" style="position: relative;">' +
+        '</div>' +
+        '</div>' +
+        '<div class="both" style="clear: both;"></div>' +
+        '</div>' +
+        '<div class="item_delete" style="min-height: 40px; height: 100%;"><p style="position:relative; top: 50%;transform: translate(0%, -50%);">삭제</p></div>' +
+        '<div class="delete_msg warm_grey_two">' +
+        '<span>삭제됐습니다</span>' +
+        '<img src="assets/imgs/drawable/ic_editor_redo.svg" class="delete_img">' +
+        '</div>' +
         '</div>';
     $("#list_area").append(str).trigger('create');
     $('#list_area').sortable('refresh');
 }
+
 // 메뉴에 컬러를 클릭했을 때
-$(document).on('click', "#font_color", function(e) {
+$(document).on('click', "#font_color", function (e) {
     $(".data_normal").fadeOut();
     $(".data_color").fadeIn();
 });
 
 // 메뉴에 뒤로가기를 클릭했을 때
-$(document).on('click', ".back", function() {
+$(document).on('click', ".back", function () {
     $(".data_normal").fadeIn();
     $(".data_color").fadeOut();
     $(".data_textSize").fadeOut();
 });
 
 // 메뉴에 볼드를 클릭했을 때
-$(document).on('click', "#font_bold", function() {
+$(document).on('click', "#font_bold", function () {
     if ($("#font_bold").hasClass("bold")) {
         imgBoldToggle(false);
     } else {
@@ -248,45 +250,45 @@ $(document).on('click', "#font_bold", function() {
 });
 
 // 메뉴에 사이즈를 클릭했을 때
-$(document).on("click", "#font_size", function() {
+$(document).on("click", "#font_size", function () {
     $(".data_normal").fadeOut();
     $(".data_textSize").fadeIn();
 });
 
 // 에디터 노출
-$(document).on('click', "#editor_txt", function() {
+$(document).on('click', "#editor_txt", function () {
     $("#editor_page").fadeIn();
     defaultMenuSetting();
 });
 
 // 에디터 숨기고, 값 초기화
-$(document).on("click", "#backImg", function() {
+$(document).on("click", "#backImg", function () {
     $("#text_area").html('');
     $("#editor_page").fadeOut();
 });
 
-$(document).on('click', "#font_bold", function() {
+$(document).on('click', "#font_bold", function () {
     setBold();
     focusIn();
 });
 
 // 입력 창에서 나갔을 경우 메뉴바 하단으로 이동
-$(document).on("blur", "#text_area", function() {
-    $("#text_style_controll").stop().animate({bottom : "0px"});
+$(document).on("blur", "#text_area", function () {
+    $("#text_style_controll").stop().animate({bottom: "0px"});
 });
 
 // 메뉴바에서 스타일 변경 후 입력 창으로 포커스 인
-$(document).on("click", "#text_style_controll", function() {
+$(document).on("click", "#text_style_controll", function () {
     focusIn();
 });
 
 // 입력 창에 포커스되면 메뉴바 떠오름
-$(document).on("focus", "#text_area", function() {
-    $("#text_style_controll").stop().animate({bottom : window.innerHeight * 0.3 + "px"});
+$(document).on("focus", "#text_area", function () {
+    $("#text_style_controll").stop().animate({bottom: window.innerHeight * 0.3 + "px"});
 });
 
 // 선택한 텍스트 설정 변경
-$(document).on('click keyDown', "#text_area", function(e) {
+$(document).on('click keyDown', "#text_area", function (e) {
     //if (e.keyCode == 13) return;
     // 선택한 영역 가져오기
     var select = document.getSelection();
@@ -296,7 +298,7 @@ $(document).on('click keyDown', "#text_area", function(e) {
 });
 
 // 작성한 텍스트 수정
-$(document).on("click", ".post", function(e) {
+$(document).on("click", ".post", function (e) {
     post_index = e.target;
     $("#text_area").html(e.target.innerHTML);
     $("#editor_page").fadeIn();
@@ -313,24 +315,23 @@ $(document).ready(function () {
             setTimeout(function () {
                 e.stopPropagation();
                 e.preventDefault();
-                for (var i=0; i<e.srcElement.childElementCount; i++) {
+                for (var i = 0; i < e.srcElement.childElementCount; i++) {
                     if (e.srcElement.childNodes[i].className != null || e.srcElement.childNodes[i].className != "") {
                         $("#text_area").html('');
                         window.document.execCommand("insertHTML", false, beforeData + textData);
                         return;
                     }
                 }
-            },10);
+            }, 10);
         });
     }
 });
 
 // Text Controll Area End!
 
-
 // Img Controll Area Start!
-$(document).on('change', "#img_input", function() {
-    var imgJosnArray = new Array();
+$(document).on('change', '#img_input', function () {
+    var imgJosnArray = [];
     var files = this.files ? this.files : [];
 
     if (!files.length || !window.FileReader) return;
@@ -338,44 +339,58 @@ $(document).on('change', "#img_input", function() {
     for (var i = 0; i < files.length; i++) {
         if (/^image/.test(files[i].type)) {
             var imgJson = {
-                "type": "image",
-                "width": window.innerWidth * 0.245,
-                "height": 90,
-                "data": files[i]
-            }
+                'type': 'image',
+                'width': window.innerWidth * 0.245,
+                'height': 90,
+                'data': files[i]
+            };
             imgJosnArray.push(imgJson);
         } else {
             alert(imgTypeError);
         }
     }
-    $("#img_input").val('');
+    $('#img_input').val('');
 
-    var event = new CustomEvent("insertEditing", {detail: imgJosnArray});
+    setEvent(imgJosnArray, insertImg);
+});
 
+function setEvent(detail, callback) {
+    var event = new CustomEvent('insertEditing', {detail: detail});
     event.callback = {
-        success: function (files) {
-            for (var i = 0; i < files.length; i++) {
-                insertImg(files[i]);
+        success: function (param) {
+            try {
+                callback(param);
+            } catch (e) {
+                this.failed(e);
             }
         },
-        failed: function () {
-            throw new Error(serverLinkError);
+        failed: function (e) {
+            console.log(e);
+            alert(errMsg);
         }
     };
     document.dispatchEvent(event);
-});
-
-function insertImg(file) {
-    var str =
-        '<div class="list_item img_content">' +
-            '<div class="item">' +
-                '<img class="user_img" src="' + file.data + '" data-width="' + file.width + '" data-height="' + file.height + '"/>' +
-                '<div class="item_album">' +
-                    '<p class="warm_grey_two">사진</p>' +
-                '</div>' + htmlDelete;
-    $("#list_area").append(str).trigger('create');
-    $('#list_area').sortable('refresh');
 }
+
+function insertImg(files) {
+    for (var i = 0; i < files.length; i++) {
+        var file = files[i];
+        var str =
+            '<div class="list_item img_content">' +
+            '<div class="item">' +
+            '<img class="user_img" src="' + _path + file.data + '" data-width="' + file.width + '" data-height="' + file.height + '"/>' +
+            '<div class="item_album">' +
+            '<p class="warm_grey_two">사진</p>' +
+            '</div>' + htmlDelete;
+
+        $('#list_area').append(str).trigger('create');
+    }
+    try {
+        $('#list_area').sortable('refresh');
+    } catch (e) {
+    }
+}
+
 // Img Controll Area End!
 
 
@@ -392,69 +407,81 @@ $(document).on('click', '.cancel', function () {
 });
 
 $(document).on('click', '#submit', function () {
-    let url = $("#url_input").val();
-    $("#url_input").val('');
-
-    if (url.length == 0) {
+    let url = $('#url_input').val();
+    if (url.length === 0) {
         alert(urlInputError);
         return;
     }
     if (urlReg.test(url)) {
-        $("#dimmed").fadeOut('fast');
-        $("#popup_link").fadeOut('fast');
+        $('#dimmed').fadeOut('fast');
+        $('#popup_link').fadeOut('fast');
 
         let linkJson = {
-            "type": "link",
-            "data": url,
-            "metadata": null
+            'type': 'link',
+            'data': url,
+            'metadata': null
         };
-        var event = new CustomEvent("insertEditing", {detail: linkJson});
 
-        event.callback = {
-            success: function (link) {
-                insertLink(link);
-            },
-            failed: function () {
-                throw new Error(serverImgError);
-            }
-        };
-        document.dispatchEvent(event);
+        setEvent(linkJson, insertLink);
     } else {
         alert(urlErrorMsg);
     }
+    $('#url_input').val('');
 });
 
 function insertLink(link) {
+    // 이미지 로딩 전 보여줄 미리보기
+    var str =
+        '<div class="list_item link_content_no" style="pointer-events: none;">' +
+        '<div class="item link">' +
+        '<div class="item_text_area">' +
+        '<p class="video_descript" style="position: relative; top: 50%; transform: translate(0%, -75%); text-align: center;">미리 보기 가져오는 중</p>' +
+        '</div>' + htmlDelete;
+
+    $('#list_area').append(str).trigger('create');
+    $('.list_item:last-child').fadeOut(250, function () {
+        // 미리보기 삭제
+        $('.list_item:last-child').remove();
+        str = linkStrTemplate(link);
+        $('#list_area').append(str).trigger('create');
+    });
+    try {
+        $('#list_area').sortable('refresh');
+    } catch (e) {
+    }
+}
+
+function linkStrTemplate(link) {
     var str = '';
-    if (link.metadata.thumbnail != null) {
+    if (link.metadata.thumbnail !== '' && link.metadata.thumbnail !== null) {
         str =
             '<div class="list_item link_content_yes">' +
-                '<div class="item link">' +
-                    '<input type="hidden" class="item_url" value="' + link.metadata.url + '">' +
-                    '<img class="thumnail" src="' + link.metadata.thumbnail +'">' +
-                    '<div class="item_img_video">'+
-                        '<p class="video_title ">' + link.metadata.title + '</p>'+
-                        '<p class="video_descript">' + link.metadata.description + '</p>'+
-                        '<p class="video_link fs_0_8">' + link.metadata.site_name + '</p>'+
-                    '</div>'+ htmlDelete;
+            '<div class="item link">' +
+            '<input type="hidden" class="item_url" value="' + link.data + '">' +
+            '<img class="thumnail" src="' + link.metadata.thumbnail + '">' +
+            '<div class="item_img_video">' +
+            '<p class="video_title ">' + link.metadata.title + '</p>' +
+            '<p class="video_descript">' + link.metadata.description + '</p>' +
+            '<p class="video_link fs_0_8">' + link.metadata.site_name + '</p>' +
+            '</div>' + htmlDelete;
     } else {
         str =
-            '<div class="list_item link_content_no">'+
-                '<div class="item link">'+
-                    '<input type="hidden" class="item_url" value="' + link.metadata.url + '">' +
-                    '<div class="item_text_area">'+
-                        '<p class="video_title ">link.metadata.title</p>'+
-                        '<p class="video_descript">link.metadata.description</p>'+
-                        '<p class="video_link fs_0_8">link.metadata.site_name</p>'+
-                    '</div>'+ htmlDelete;
+            '<div class="list_item link_content_no">' +
+            '<div class="item link">' +
+            '<input type="hidden" class="item_url" value="' + link.data + '">' +
+            '<div class="item_text_area">' +
+            '<p class="video_title ">' + link.metadata.title + '</p>' +
+            '<p class="video_descript">' + link.metadata.description + '</p>' +
+            '<p class="video_link fs_0_8">' + link.metadata.site_name + '</p>' +
+            '</div>' + htmlDelete;
     }
-    $("#list_area").append(str).trigger('create');
-    $('#list_area').sortable('refresh');
+    return str;
 }
+
 // link Controll Area End!
 
 // consturct
-AprilEditor = function(){
+AprilEditor = function () {
 
     var linkJsonObj = {
         "type": "link",
@@ -476,7 +503,8 @@ AprilEditor = function(){
     var temObj = {};
 
     this.setItems = function (jsonArr) {
-        for (var i=0; i<jsonArr.length; i++) {
+        pathValidator();
+        for (var i = 0; i < jsonArr.length; i++) {
             switch (jsonArr[i].type) {
                 case "link":
                     insertLink(jsonArr[i]);
@@ -486,7 +514,7 @@ AprilEditor = function(){
                     break;
                 case "text":
                     var str = "<div>";
-                    for (var j=0; j<jsonArr[i].data.length; j++) {
+                    for (var j = 0; j < jsonArr[i].data.length; j++) {
                         //console.log(jsonArr[i].data[j]);
                         if (jsonArr[i].data[j].text == "\n") {
                             str += "</div><div>";
@@ -517,65 +545,75 @@ AprilEditor = function(){
         }
     },
 
-    this.getItems = function () {
-        let length = $(".list_item").length;
-        let jsonArr = new Array();
+        this.getItems = function () {
+            let length = $(".list_item").length;
+            let jsonArr = new Array();
 
-        for (var i=1; i<=length; i++) {
-            var ref = $(".list_item:nth-child(" + i + ")");
-            if (ref.find(".item").css('display') == 'none') continue;
-            var className = ref.attr('class');
+            for (var i = 1; i <= length; i++) {
+                var ref = $(".list_item:nth-child(" + i + ")");
+                if (ref.find(".item").css('display') == 'none') continue;
+                var className = ref.attr('class');
 
-            switch (className) {
-                case "list_item link_content_yes" :
-                    linkJsonObj.data = ref.find(".item_url").val();
-                    linkJsonObj.metadata.title = ref.find(".video_title").text();
-                    linkJsonObj.metadata.site_name = ref.find(".video_link").text();
-                    linkJsonObj.metadata.description = ref.find(".video_descript").text();
-                    linkJsonObj.metadata.thumbnail = ref.find(".thumnail").attr("src");
-                    linkJsonObj.metadata.url = ref.find(".item_url").val();
-                    temObj = linkJsonObj;
-                    break;
-                case "list_item link_content_no" :
-                    linkJsonObj.data = ref.find(".item_url").val();
-                    linkJsonObj.metadata.title = ref.find(".video_title").text();
-                    linkJsonObj.metadata.site_name = ref.find(".video_link").text();
-                    linkJsonObj.metadata.description = ref.find(".video_descript").text();
-                    linkJsonObj.metadata.thumbnail = "";
-                    linkJsonObj.metadata.url = ref.find(".item_url").val();
-                    temObj = linkJsonObj;
-                    break;
-                case "list_item text_content" :
-                    var textJsonObj = {
-                                        "type": "text",
-                                        "data": []
-                                        };
-                    var post = ref.find(".post").children();
-                    for (var j=0; j<post.length; j++) {
-                        insertNode(post[j], textJsonObj, fontColorBlack, 1, false);
+                switch (className) {
+                    case "list_item link_content_yes" :
+                        linkJsonObj.data = ref.find(".item_url").val();
+                        linkJsonObj.metadata.title = ref.find(".video_title").text();
+                        linkJsonObj.metadata.site_name = ref.find(".video_link").text();
+                        linkJsonObj.metadata.description = ref.find(".video_descript").text();
+                        linkJsonObj.metadata.thumbnail = ref.find(".thumnail").attr("src");
+                        linkJsonObj.metadata.url = ref.find(".item_url").val();
+                        temObj = linkJsonObj;
+                        break;
+                    case "list_item link_content_no" :
+                        linkJsonObj.data = ref.find(".item_url").val();
+                        linkJsonObj.metadata.title = ref.find(".video_title").text();
+                        linkJsonObj.metadata.site_name = ref.find(".video_link").text();
+                        linkJsonObj.metadata.description = ref.find(".video_descript").text();
+                        linkJsonObj.metadata.thumbnail = "";
+                        linkJsonObj.metadata.url = ref.find(".item_url").val();
+                        temObj = linkJsonObj;
+                        break;
+                    case "list_item text_content" :
+                        var textJsonObj = {
+                            "type": "text",
+                            "data": []
+                        };
+                        var post = ref.find(".post").children();
+                        for (var j = 0; j < post.length; j++) {
+                            insertNode(post[j], textJsonObj, fontColorBlack, 1, false);
 
-                        if (post.length != j-1) {
-                            textJsonObj.data.push({ "text" : "\n" });
+                            if (post.length != j - 1) {
+                                textJsonObj.data.push({"text": "\n"});
+                            }
                         }
-                    }
-                    temObj = textJsonObj;
-                    //console.log(textJsonObj);
-                    break;
-                case "list_item img_content" :
-                    imgJsonObj.width = ref.find('.user_img').data('width');
-                    imgJsonObj.height = ref.find('.user_img').data('height');
-                    imgJsonObj.data = ref.find(".user_img").attr("src");
-                    temObj = imgJsonObj;
-                    break;
+                        temObj = textJsonObj;
+                        //console.log(textJsonObj);
+                        break;
+                    case "list_item img_content" :
+                        imgJsonObj.width = ref.find('.user_img').data('width');
+                        imgJsonObj.height = ref.find('.user_img').data('height');
+                        imgJsonObj.data = ref.find(".user_img").attr("src");
+                        temObj = imgJsonObj;
+                        break;
+                }
+                jsonArr.push(temObj);
             }
-            jsonArr.push(temObj);
+            return jsonArr;
         }
-        return jsonArr;
+
+    this.setPath = function (path) {
+        _path = path;
+    }
+};
+
+function pathValidator() {
+    if (this._path == '') {
+        alert(pathError);
     }
 }
 
 function insertNode(el, arr, color, size, boldState) {
-    for (var g=0; g<=el.childNodes.length; g++) {
+    for (var g = 0; g <= el.childNodes.length; g++) {
         var color = color;
         var size = size;
         var bold = boldState;
@@ -586,7 +624,7 @@ function insertNode(el, arr, color, size, boldState) {
         //console.log(self.nodeName);
         switch (self.nodeName) {
             case "#text" :
-                var text = { "text" : self.nodeValue };
+                var text = {"text": self.nodeValue};
                 text.attr = {};
                 text.attr.color = color;
                 text.attr.size = size;
@@ -610,14 +648,14 @@ function insertNode(el, arr, color, size, boldState) {
                     insertNode(self, arr, color, size, bold);
                 } else {
                     if (self.firstChild.nodeType == Node.TEXT_NODE) {
-                        var text = { "text" : self.firstChild.nodeValue };
+                        var text = {"text": self.firstChild.nodeValue};
                         text.attr = {};
                         text.attr.color = color;
                         text.attr.size = size;
                         text.attr.bold = bold;
-                       arr.data.push(text);
+                        arr.data.push(text);
                     } else if (self.lastChild.nodeType == Node.TEXT_NODE) {
-                        var text = { "text" : self.lastChild.nodeValue };
+                        var text = {"text": self.lastChild.nodeValue};
                         text.attr = {};
                         text.attr.color = color;
                         text.attr.size = size;
@@ -628,9 +666,9 @@ function insertNode(el, arr, color, size, boldState) {
                 break;
             case "B" :
                 if (self.childElementCount != 0) {
-                    insertNode(self, arr , color, size, true);
+                    insertNode(self, arr, color, size, true);
                 } else if (self.firstChild.nodeType == Node.TEXT_NODE) {
-                    var text = { "text" : self.firstChild.nodeValue };
+                    var text = {"text": self.firstChild.nodeValue};
                     text.attr = {};
                     text.attr.color = color;
                     text.attr.size = size;
@@ -645,18 +683,18 @@ function insertNode(el, arr, color, size, boldState) {
 }
 
 const htmlDelete =
-            '<div class="selectBar">'+
-                '<div style="text-align: center; line-height: 6">'+
-                    '<img class="selectImg" src="/AprilEditor/assets/imgs/drawable/ic_drag.svg" style="position: relative;">'+
-                '</div>'+
-            '</div>'+
+    '<div class="selectBar">' +
+    '<div style="text-align: center; line-height: 6">' +
+    '<img class="selectImg" src="assets/imgs/drawable/ic_drag.svg" style="position: relative;">' +
+    '</div>' +
+    '</div>' +
     '<div class="both" style="clear: both;"></div>' +
-        '</div>'+
-        '<div class="item_delete"><p style="line-height: 6;">삭제</p></div>'+
-        '<div class="delete_msg warm_grey_two">'+
-            '<span>삭제됐습니다</span>'+
-            '<img src="/AprilEditor/assets/imgs/drawable/ic_editor_redo.svg" class="delete_img">'+
-        '</div>'+
+    '</div>' +
+    '<div class="item_delete"><p style="line-height: 6;">삭제</p></div>' +
+    '<div class="delete_msg warm_grey_two">' +
+    '<span>삭제됐습니다</span>' +
+    '<img src="assets/imgs/drawable/ic_editor_redo.svg" class="delete_img">' +
+    '</div>' +
     '</div>';
 
 $(document).on('click', '.item_delete', function () {
@@ -665,10 +703,10 @@ $(document).on('click', '.item_delete', function () {
 
 $(document).on('click', '.delete_img', function (e) {
     $(this).parent().parent().children(':eq(0),:eq(1),:eq(2)').fadeToggle('fast');
-    $(this).parent().parent().children(':eq(0)').animate({ right:0 });
+    $(this).parent().parent().children(':eq(0)').animate({right: 0});
 });
 
-$(function() {
+$(function () {
     $('#list_area').sortable({
         //placeholder:"itemBox",
         scroll: false,
@@ -693,22 +731,22 @@ $(function() {
     });
 
 // 손을 놓았을 때
-    mc.on("panend", function() {
-        var right = one.css('right').replace("px","");
+    mc.on("panend", function () {
+        var right = one.css('right').replace("px", "");
         var limit = window.innerWidth * 2 / 10 - 15;
-        if (right < limit/2) {
-            one.animate({ right : "0px" });
+        if (right < limit / 2) {
+            one.animate({right: "0px"});
         } else {
-            one.animate({ right : limit + "px" });
+            one.animate({right: limit + "px"});
         }
     });
 });
 
-function panControll (ev, limit, direction) {
+function panControll(ev, limit, direction) {
 
     if ($(ev.target).parent().attr('class') == 'selectBar') return;
     var target = $(ev.target).parent().parent().attr('class');
-    var item =  $(ev.target).parent().parent();
+    var item = $(ev.target).parent().parent();
 
     if (target !== 'item' && target !== 'item link') {
         item = item.children(":eq(0)");
@@ -716,7 +754,7 @@ function panControll (ev, limit, direction) {
     }
     one = item;
     if (target === 'item' || target === 'item link') {
-        var right = item.css('right').replace("px","");
+        var right = item.css('right').replace("px", "");
 
         // 제한에 도달할 경우 리턴
         if (right == limit) return;
@@ -734,7 +772,7 @@ function panControll (ev, limit, direction) {
                 item.css('right', limit);
             }
         } else if (direction == 'right') {
-            if (limit <= (right - ev.velocityX * 10)){
+            if (limit <= (right - ev.velocityX * 10)) {
                 item.css('right', right - ev.velocityX * 10);
             } else {
                 item.css('right', limit);
