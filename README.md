@@ -1,5 +1,5 @@
 # AprilEditor
-javascript을 기반으로 구현된 웹 에디터입니다.
+모바일 환경을 지원하는 javascript을 기반으로 구현된 웹 에디터입니다.
 
 
 ## 1. Include
